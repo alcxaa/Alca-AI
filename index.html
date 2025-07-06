@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alca Ai-v0.1</title>
+    <meta name="description" content="Chatbot AI yang dikembangkan oleh Daffa Akbar untuk membantu menjawab berbagai pertanyaan">
+    <link rel="icon" type="image/png" href="1.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="logo-text">
+                    <h1 class="logo-title">Alca Ai</h1>
+                    <p class="logo-version">v0.1</p>
+                </div>
+            </div>
+            
+            <nav class="nav">
+                <button class="nav-btn" id="Tentang-btn">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Tentang</span>
+                </button>
+                <button class="nav-btn" id="Bantuan-btn">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Bantuan</span>
+                </button>
+                <button class="nav-btn theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Chat Area -->
+    <main class="main-container">
+        <div class="chat-card">
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble bot-bubble">
+                            <p>Halo, aku Alca Ai masih dalam tahap perkembangan. Terimakasih!</p>
+                            <span class="message-time" id="initial-time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <div class="message-avatar bot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="typing-bubble">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    class="chat-input" 
+                    placeholder="Tanya apa aja!"
+                    autocomplete="off"
+                >
+                <button class="send-button" id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Buatan Daffa Akbar | v0.1</p>
+    </footer>
+
+    <!-- Tentang Modal -->
+    <div class="modal" id="Tentang-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <i class="fas fa-sparkles"></i>
+                    Tentang Alca Ai
+                </h3>
+                <button class="modal-close" id="Tentang-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Alca Ai adalah chatbot AI yang dikembangkan oleh Daffa Akbar. Bot ini dirancang untuk membantu menjawab berbagai pertanyaan dengan cara yang ramah dan informatif.</p>
+                
+                <div class="feature-box">
+                    <h4>Fitur Utama:</h4>
+                    <ul>
+                        <li>• Respons cepat dan akurat</li>
+                        <li>• Interface yang user-friendly</li>
+                        <li>• Dukungan tema gelap/terang</li>
+                        <li>• Desain responsif</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bantuan Modal -->
+    <div class="modal" id="Bantuan-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <i class="fas fa-question-circle"></i>
+                    Bantuan
+                </h3>
+                <button class="modal-close" id="Bantuan-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>Cara Menggunakan:</h4>
+                    <ol>
+                        <li>Ketik pertanyaan di kolom input</li>
+                        <li>Tekan Enter atau klik tombol Kirim</li>
+                        <li>Tunggu respons dari Alca AiBot</li>
+                    </ol>
+                </div>
+                
+                <div class="tips-box">
+                    <h4>Tips:</h4>
+                    <ul>
+                        <li>• Gunakan bahasa yang jelas</li>
+                        <li>• Tanyakan satu hal dalam satu waktu</li>
+                        <li>• Gunakan toggle tema untuk kenyamanan mata</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <footer class="footer">
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</html>
